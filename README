@@ -1,0 +1,12 @@
+This tiny program prints full patch of the "root" git directory you're in,
+or exits(1) if you're not inside some git repo.
+
+It is intended to be run thousands of times within various scripts,
+thus the C version, consuming the least amount of RSS possible.
+
+License is FreeBSD 2-clause license, but the author was too lazy
+to put it here.
+
+cheers
+
+(c) 2013 Wojtek Kaczmarek <frk@kofeina.net>
