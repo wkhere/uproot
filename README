@@ -4,6 +4,11 @@ or exits(1) if you're not inside some git repo.
 It is intended to be run thousands of times within various scripts,
 thus the C version, consuming the least amount of RSS possible.
 
+By the way this is shorter and quicker equivalent of running the following
+vanilla git subcommand:
+
+`git rev-parse --show-toplevel`
+
 License is FreeBSD 2-clause license, but the author was too lazy
 to put it here.
 
