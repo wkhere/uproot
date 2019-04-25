@@ -16,7 +16,7 @@ int main() {
 
   while (1) {
     cwd = getcwd(cwd_buf, PATH_SZ);
-    glob_ret = glob(".git", 0, NULL, &glob_buf);
+    glob_ret = glob(".git", GLOB_NOSORT|GLOB_ONLYDIR, NULL, &glob_buf);
     globfree(&glob_buf);
 
     switch (glob_ret) {
