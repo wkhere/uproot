@@ -24,13 +24,10 @@ int main() {
       printf("%s\n", cwd);
       exit(0);
 
-    case GLOB_NOMATCH:
+    default:
       if (strcmp("/", cwd) == 0) exit(1); // no .git up to root dir
       if (chdir("..") != 0) error(1, errno, "chdir");
       continue;
-
-    default:
-      error(1, errno, "glob");
     }
   }
 }
