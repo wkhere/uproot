@@ -9,8 +9,5 @@ vanilla git subcommand:
 
 `git rev-parse --show-toplevel`
 
-License is FreeBSD 2-clause license, but the author was too lazy
-to put it here.
-
-cheers
+Licensed under FreeBSD 3-clause license.
 
