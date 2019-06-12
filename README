@@ -1,4 +1,4 @@
-This tiny program prints full path of the "root" git directory you're in,
+This tiny program prints full path of the toplevel git directory you're in,
 or exits(1) if you're not inside some git repo.
 
 It is intended to be run thousands of times within various scripts,
