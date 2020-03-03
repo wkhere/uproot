@@ -4,8 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
-#include <errno.h>
-#include <error.h>
 #define PATH_SZ PATH_MAX
 
 int main() {
@@ -26,7 +24,7 @@ int main() {
 
     default:
       if (strcmp("/", cwd) == 0) exit(1); // no .git up to root dir
-      if (chdir("..") != 0) error(1, errno, "chdir");
+      if (chdir("..") != 0) {perror("chdir"); exit(1);}
       continue;
     }
   }
