@@ -13,6 +13,8 @@ int uproot(const char *direntry) {
 
   while (1) {
     cwd = getcwd(cwd_buf, PATH_SZ);
+    if (cwd == NULL) { perror("getcwd"); return 1; }
+
     glob_ret = glob(direntry, GLOB_NOSORT, NULL, &glob_buf);
     globfree(&glob_buf);
 
