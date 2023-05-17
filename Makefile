@@ -4,8 +4,8 @@ uproot:	uproot.c main.c
 static:		uproot.c main.c
 			cc -Wall -O3 -static uproot.c main.c -o uproot
 
-install:	uproot
+install:	uproot gitroot
 			strip uproot
-			install uproot /usr/local/bin/
+			install -t /usr/local/bin/ uproot gitroot
 
 .PHONY: install
