@@ -1,13 +1,22 @@
-This tiny program prints full path of the toplevel git directory you're in,
-or exits(1) if you're not inside some git repo.
+This tiny program prints full path of the toplevel git / syncthing directory
+you're in, or exits(1) if you're not inside one.
 
+Usage: `uproot git` or `uproot st`.
+
+Note: this program was called `gitroot` before and was limited to git only,
+thus it's providing a oneliner `gitroot` script for compatibility.
+
+
+What else...
 It is intended to be run thousands of times within various scripts,
-thus the C version, consuming the least amount of RSS possible.
+thus the C version, consuming the least amount of resources possible.
 
-By the way this is shorter and quicker equivalent of running the following
-vanilla git subcommand:
+By the way, invoking 'uproot git' is a shorter and quicker equivalent
+of running the following vanilla git subcommand:
 
 `git rev-parse --show-toplevel`
 
-Licensed under FreeBSD 3-clause license.
+(vanilla syncthing does not have an equivalent).
 
+
+Licensed under FreeBSD 3-clause license.
