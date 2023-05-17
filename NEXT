@@ -1,0 +1,2 @@
+- modify to find also the syncthing root
+  ...then the tool could be renamed as well (uproot git?)
