@@ -1,8 +1,8 @@
-uproot:	uproot.c
-			cc -Wall -O3 uproot.c -o uproot
+uproot:	uproot.c main.c
+			cc -Wall -O3 uproot.c main.c -o uproot
 
-static:		uproot.c
-			cc -Wall -O3 -static uproot.c -o uproot
+static:		uproot.c main.c
+			cc -Wall -O3 -static uproot.c main.c -o uproot
 
 install:	uproot
 			strip uproot
