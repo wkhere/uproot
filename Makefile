@@ -8,7 +8,6 @@ $(BIN):	uproot.o main.o
 
 
 install: $(BIN) gitroot
-	strip $(BIN)
 	install -t /usr/local/bin/ $(BIN) gitroot
 
 clean:
