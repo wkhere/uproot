@@ -1,2 +1,3 @@
+*.o
 /uproot
 /uproot.exe

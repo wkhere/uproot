@@ -1,11 +1,17 @@
-uproot:	uproot.c main.c
-			cc -Wall -O3 uproot.c main.c -o uproot
+BIN=uproot
 
-static:		uproot.c main.c
-			cc -Wall -O3 -static uproot.c main.c -o uproot
+$(BIN):	uproot.o main.o
+	cc $^ -o $(BIN)
 
-install:	uproot gitroot
-			strip uproot
-			install -t /usr/local/bin/ uproot gitroot
+%.o: %.c
+	cc -c $< -Wall -O3 -o $@
 
-.PHONY: install
+
+install: $(BIN) gitroot
+	strip $(BIN)
+	install -t /usr/local/bin/ $(BIN) gitroot
+
+clean:
+	rm -f *.o $(BIN)
+
+.PHONY: install clean
