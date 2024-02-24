@@ -3,16 +3,15 @@
 #include <string.h>
 #include <stdio.h>
 #include <limits.h>
-#define PATH_SZ PATH_MAX
 
 int uproot(const char *direntry) {
   static glob_t glob_buf;
-  static char cwd_buf[PATH_SZ];
+  static char cwd_buf[PATH_MAX];
   const char *cwd;
   int glob_ret;
 
   while (1) {
-    cwd = getcwd(cwd_buf, PATH_SZ);
+    cwd = getcwd(cwd_buf, PATH_MAX);
     if (cwd == NULL) { perror("getcwd"); return 1; }
 
     glob_ret = glob(direntry, GLOB_NOSORT, NULL, &glob_buf);
