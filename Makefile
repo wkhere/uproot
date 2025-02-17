@@ -8,7 +8,7 @@ $(BIN):	uproot.o main.o
 
 
 install: $(BIN) gitroot
-	install -t /usr/local/bin/ $(BIN) gitroot
+	install $(BIN) gitroot /usr/local/bin/
 
 clean:
 	rm -f *.o $(BIN)
